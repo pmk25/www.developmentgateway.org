@@ -17,10 +17,12 @@ include_share_widgets: True
 
         <div class="post-meta">
           <span class="post-date">
-            <span class="fa fa-calendar"></span>{{ post.date | date: '%B %d, %Y' }}
+            {% icon small {{ 'images/icons/calendar.svg' | prepend: site.baseurl }} class="small-icon" %}
+            {{ post.date | date: '%B %d, %Y' }}
           </span>
           <span class="post-author">
-            <span class="fa fa-user"></span>{{ post.author }}
+            {% icon small {{ 'images/icons/user.svg' | prepend: site.baseurl }} class="small-icon" %}
+            {{ post.author }}
           </span>
           <span class="post-categories">{{ post.categories }}</span>
         </div>
